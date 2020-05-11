@@ -1,27 +1,32 @@
 package com.employeeWage;
 
-class EmployeeWageDay19 {
+class EmployeeWageDay19 
+{
 	public static void main(String args[])
 	{	
+		//constants
 		final int isFullTime=1 ,isPartTime=2;
+		//variables
 		int empDailyWage=0, empDailyHours=0, empWagePerHour=20;
+		int empMonthlyWage=0;
 		System.out.println("Welcome to Employee Wage Computation Program");
-		int empCheck=(int)(Math.floor(Math.random()*10)%3);
-		switch (empCheck)
-		{
-			case isFullTime :
-				System.out.println("Employee is Present");
-				empDailyHours=8;
-			break;
-			case isPartTime :
-				System.out.println("Employee is present part time");
-				empDailyHours=4;
-			break;
-		default :
-			System.out.println("Employee is Absent");
-		}	
+		//computation of Monthly wage
+		for (int i=1;i<=20;i++)
+		{	
+			int empCheck=(int)(Math.floor(Math.random()*10)%3);
+			switch (empCheck)
+			{
+				case isFullTime :
+					empDailyHours=8;
+				break;
+				case isPartTime :
+					empDailyHours=4;
+				break;
+				default :		
+			}	
 		empDailyWage=empDailyHours*empWagePerHour;
-		System.out.println("Today's Wage of Employee is :"+empDailyWage);
+		empMonthlyWage+=empDailyWage;
+		}
+		System.out.println("Monthly Wage of Employee is :"+empMonthlyWage);	
 	}
-
 }
