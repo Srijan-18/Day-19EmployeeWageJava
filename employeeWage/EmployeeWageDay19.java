@@ -22,7 +22,8 @@ class EmployeeWageDay19
 				case isPartTime :
 					empDailyHours=4;
 				break;
-				default :		
+				default :
+					empDailyHours=0;
 			}	
 		empDailyWage=empDailyHours*empWagePerHour;
 		empMonthlyWage+=empDailyWage;
